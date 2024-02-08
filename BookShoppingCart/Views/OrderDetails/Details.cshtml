@@ -1,0 +1,52 @@
+﻿@model BookShoppingCart.Models.OrderDetail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="mb-4 mt-3">Sipariş Detayları</h2>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Quantity)*@ Adet
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.UnitPrice)*@ Fiyat
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @* @Html.DisplayNameFor(model => model.Order)*@ Sipariş ID
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Order.UserId)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Book)*@ Kitap Adı
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Book.BookName)
+        </dd>
+        <hr />
+        <dt class="col-sm-2">
+            @* @Html.DisplayNameFor(model => model.Book)*@ Yazar
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Book.AuthorName)
+        </dd>
+    </dl>
+</div>
+<div>
+  @*  <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |*@
+    <a class="btn btn-dark" asp-action="Index">Listeye Dön</a>
+</div>

@@ -1,0 +1,60 @@
+﻿ @model BookShoppingCart.Models.Book
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2 class="mt-3">Kitap Detay</h2>
+
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @* @Html.DisplayNameFor(model => model.BookName)*@ Kitap Adı :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @* @Html.DisplayNameFor(model => model.AuthorName)*@ Yazar Adı :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @* @Html.DisplayNameFor(model => model.Price)*@Kitap Fiyatı (TL) :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @*  @Html.DisplayNameFor(model => model.Description)*@ Kitap Açıklama :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <hr />
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Image)*@ Resim :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+       
+        <hr />
+        <dt class = "col-sm-2">
+            @*@Html.DisplayNameFor(model => model.Genre)*@ Kategori :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Genre.GenreName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Düzenle</a> |
+    <a class="btn btn-dark" asp-action="Index">Listeye Dön</a>
+</div>
