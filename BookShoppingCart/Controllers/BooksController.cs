@@ -29,6 +29,7 @@ namespace BookShoppingCart.Controllers
             return View(await applicationDbContext.ToListAsync());
         }
 
+        [HttpGet]
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
